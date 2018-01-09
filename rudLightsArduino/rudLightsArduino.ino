@@ -1,5 +1,5 @@
 /*
- * rudLights
+ * rudLightsArduino
  * Copyright © 2017 Del Rudolph <me@darthrudolph.com>
  * Released under the GNU General Public License
  *
@@ -50,6 +50,8 @@ void setup() {
 //  }
 
   // startup animation
+  // pixel color 0,128,0 is green. You can change this to any color you want using
+  // RGB colors. See https://www.w3schools.com/colors/colors_picker.asp for more color choices
   for(int i=0; i<LED_COUNT+2; i++){
     strip.setPixelColor(i, 0, 128, 0);
     if(i > 1){
