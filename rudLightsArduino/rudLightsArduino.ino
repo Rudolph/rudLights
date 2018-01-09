@@ -1,7 +1,7 @@
 /*
  * rudLightsArduino
  * Copyright © 2017 Del Rudolph <me@darthrudolph.com>
- * Released under the GNU General Public License
+ * Released under the GNU General Public License version 3
  *
  * Receives text from Android app and displays it on a string
  * of Christmas lights. Yes, inspired by Stranger Things, as well
@@ -24,9 +24,13 @@ SoftwareSerial DBGSerial(10, 11);   // rxPin, txPin
 
 /*
  * Set up the WS2812B light strip on digital pin 6
+ * LED_COUNT should stay at 26, as that's how many letters are in the alphabet ;-)
+ * LED_PIN can be any Arduino digital pin, it doesn't have to be 6. Change it here if
+ * you used a different one.
  */
 #define LED_COUNT 26
-Adafruit_NeoPixel strip = Adafruit_NeoPixel(LED_COUNT, 6, NEO_GRB + NEO_KHZ800);
+#define LED_PIN 6
+Adafruit_NeoPixel strip = Adafruit_NeoPixel(LED_COUNT, LED_PIN, NEO_GRB + NEO_KHZ800);
 
 void setup() {
   Serial.begin(9600);      // set up serial to the HC-05
