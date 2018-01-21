@@ -1,0 +1,14 @@
+[Unit]
+Description=rudLightsPi Bluetooth2Serial server
+Documentation=https://rudforce.com/rudLights/ https://www.instructables.com/id/App-controlled-Alphabet-Board-Inspired-by-Stranger/
+Requires=bluetooth.target
+After=bluetooth.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /home/pi/rudLightsPi.py
+ExecStartPost=/bin/hciconfig hci0 piscan
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
