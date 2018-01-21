@@ -31,4 +31,5 @@ And finally we need to install the actual rudLightsPi Python script and the Syst
 ## That's it (for now)
 This little program gets the job done for me for now. I will be adding a (local) web interface someday so my wife's iPhone can play too. I imagine that will result in a complete rewrite of what is here now.
 
-<sup>\*</sup>I'll not be getting into anything about mini uarts or what have you
+======
+\*I'll not be getting into anything about mini uarts or what have you
