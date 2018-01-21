@@ -18,7 +18,7 @@ import logging.handlers
 
 # Set up logging
 l = logging.getLogger(__name__)
-l.setLevel(logging.DEBUG)
+l.setLevel(logging.INFO)
 
 lHandler = logging.handlers.RotatingFileHandler('/var/log/rudLightsPi.log', maxBytes = 10000, backupCount = 3)
 
