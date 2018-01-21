@@ -28,5 +28,5 @@ Lastly we need to tell systemd to not use that console anymore: `sudo systemctl 
 ## The actual program
 And finally we need to install the actual rudLightsPi Python script and the Systemd service file to run it. Open up a terminal on, or shell into, your Pi W. I'll assume you're in the user pi's home folder, modify what follows appropriately if you're in some other folder. First up we need to clone the script to your Pi: `git clone https://github.com/Rudolph/rudLights.git` then `cd rudLights/rudLightsPi` so you're in the folder with rudLightsPi.py and rudlightspi.service. Copy the .py file to pi's home folder: `cp rudLightsPi.py /home/pi/`. If you want to keep it somewhere else you'll need to edit the .service file to point `Execstart` to the right location. Now copy the .service file so systemd can run the program at boot: `sudo cp rudlightspi.service /etc/systemd/system/` and tell systemd to enable it `sudo systemctl enable rudlightspi.service`. At this point it's probably easiest to simply reboot your Pi, that will ensure that everything is started up the way, and the order in which, it's supposed to.
 
-### That's it (for now)
+## That's it (for now)
 This little program gets the job done for me for now. I will be adding a (local) web interface someday so my wife's iPhone can play too. I imagine that will result in a complete rewrite of what is here now.
