@@ -7,7 +7,7 @@ After=bluetooth.target
 [Service]
 Type=simple
 ExecStart=/usr/bin/python3 /home/pi/rudLightsPi.py
-ExecStartPost=/bin/hciconfig hci0 piscan
+#ExecStartPost=/bin/hciconfig hci0 piscan
 Restart=always
 
 [Install]
